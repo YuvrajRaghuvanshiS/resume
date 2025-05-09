@@ -1,36 +1,39 @@
-name: Build LaTeX Document
+name: Build and Release Resume
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest  # Uses Ubuntu runner
-    
+  build-and-release:
+    runs-on: ubuntu-latest
+
     steps:
-      # Checkout repository
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      # Compile LaTeX document
+
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex  # Your main LaTeX file
-          compiler: latexmk    # Default compiler
-          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-          latexmk_use_xelatex: true  # Use XeLaTeX instead of pdfLaTeX
+          root_file: main.tex
+          latexmk_use_xelatex: true
           pre_compile: |
             tlmgr update --self
             tlmgr install moderncv
             tlmgr install fontawesome
-          post_compile: |
-            latexmk -c  # Clean up temporary files
-            
-      # Upload PDF as artifact
-      - name: Upload PDF
-        uses: actions/upload-artifact@v4
+
+      - name: Rename PDF
+        run: mv main.pdf "Yuvraj Raghuvanshi.pdf"
+
+      - name: Get current date
+        id: date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: resume.pdf
-          path: main.pdf  # Path to generated PDF
-          retention-days: 5  # Keep artifact for 5 days
+          name: "Yuvraj Raghuvanshi Resume (${{ env.DATE }})"
+          tag_name: resume-${{ env.DATE }}
+          body: "Professional Resume - Yuvraj Raghuvanshi"
+          files: Yuvraj Raghuvanshi.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
