@@ -11,15 +11,32 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
+      - name: Set up TeX Live
+        uses: teatimeguest/setup-texlive-action@v2
         with:
-          root_file: main.tex
-          latexmk_use_xelatex: true
-          pre_compile: |
-            tlmgr update --self
-            tlmgr install moderncv
-            tlmgr install fontawesome
+          packages: |
+            scheme-basic
+            latexmk
+            xcolor
+            fontspec
+            geometry
+            enumitem
+            hyperref
+            marvosym
+            fontawesome
+            ifthen
+            etoolbox
+            fancyhdr
+            microtype
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y qpdf chktex r-base
+
+      - name: Build LaTeX document using custom latexmkrc
+        run: |
+          latexmk -r ./latexmkrc -pdf -halt-on-error main.tex
 
       - name: Rename PDF
         run: mv main.pdf "Yuvraj Raghuvanshi.pdf"
