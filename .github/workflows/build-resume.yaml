@@ -43,7 +43,7 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+        run: echo "DATE=$(date +'%d-%m-%Y_%Hh%Mm')" >> $GITHUB_ENV
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -52,5 +52,6 @@ jobs:
           tag_name: resume-${{ env.DATE }}
           body: "Professional Resume - Yuvraj Raghuvanshi"
           files: Yuvraj Raghuvanshi.pdf
+          make_latest: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
