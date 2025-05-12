@@ -380,6 +380,10 @@
 % usage: \cvlistdoubleitem[label]{item1}{item2}
 \newcommand*{\cvlistdoubleitem}[3][\listitemsymbol]{}
 
+% makes a resume line with 3 list items
+% usage: \cvlisttripleitem[label]{item1}{item2}{item3}
+\newcommand*{\cvlisttripleitem}[4][\listitemsymbol]{}
+
 % makes a typical resume job / education entry
 % usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
 \newcommand*{\cventry}[7][.25em]{}

@@ -134,6 +134,7 @@
 \settowidth{\listitemsymbolwidth}{\listitemsymbol}
 \newlength{\listitemmaincolumnwidth}
 \newlength{\listdoubleitemmaincolumnwidth}
+\newlength{\listtripleitemmaincolumnwidth}
 
 % commands
 \renewcommand*{\recomputecvlengths}{%
@@ -148,6 +149,8 @@
   % listdoubleitem lengths
   \setlength{\listdoubleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
   \setlength{\listdoubleitemmaincolumnwidth}{0.5\listdoubleitemmaincolumnwidth}%
+  % listdoubleitem lengths
+  \setlength{\listtripleitemmaincolumnwidth}{0.3\textwidth}
   % fancyhdr lengths
   \renewcommand{\headwidth}{\textwidth}%
   % regular lengths
@@ -226,6 +229,17 @@
   \ifthenelse{\equal{#3}{}}%
     {}%
     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
+
+\renewcommand*{\cvlisttripleitem}[4][.25em]{%
+  \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#2\end{minipage}%
+  \hfill
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#3\end{minipage}}%
+  \hfill
+  \ifthenelse{\equal{#4}{}}%
+    {}%
+    {\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#4\end{minipage}}}}
 
 \renewcommand*{\cventry}[7][.25em]{
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
