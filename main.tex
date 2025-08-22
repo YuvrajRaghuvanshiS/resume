@@ -1,458 +1,260 @@
-%% start of file `template.tex'.
-%% 
-%% Original Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
-%% Modified Copyright 2021-2022: Rajib Das Bhagat (rajibdasbhagat@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+\documentclass[10pt]{extarticle}
+\usepackage[a4paper,margin=0.5in]{geometry}  % Reasonable for most printers
+\usepackage{romannum}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
+\usepackage{nopageno}
+\usepackage{fontawesome5} % For icons
+\setlist[itemize]{noitemsep, topsep=0pt}
+\addtolength{\parskip}{-1.5mm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% DOCUMENT CLASS AND SETUP %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Drive icon for experience letter
+\newcommand{\driveicon}[1]{\href{#1}{\faGoogleDrive}}
 
-\documentclass[11pt,a4paper,sans]{moderncv}  
-% Possible options:
-% - Font size: '10pt', '11pt' (default), '12pt'
-% - Paper size: 'a4paper' (default), 'letterpaper', 'a5paper', etc.
-% - Font family: 'sans' (default), 'roman'
+% External link icon for product/company
+\newcommand{\exticon}[1]{\href{#1}{\small \faExternalLink*}}
 
-% ModernCV theme selection
-\moderncvstyle{banking}  % Style options: 'casual', 'classic', 'oldstyle', 'banking'
-\moderncvcolor{black}    % Color options: 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
-% Uncomment to change default font
-%\renewcommand{\familydefault}{\sfdefault}
-
-% Uncomment to suppress page numbers for multi-page CVs
-%\nopagenumbers{}
-
-% Character encoding (UTF-8 recommended)
-\usepackage[utf8]{inputenc}
-
-% For using icons like LinkedIn, GitHub etc.
-\usepackage{fontawesome}
-
-% Page layout and margins
-\usepackage[scale=0.9]{geometry}
-
-% Uncomment to adjust column widths if needed
-%\setlength{\hintscolumnwidth}{3cm}  % Width of date column
-%\setlength{\makecvtitlenamewidth}{10cm} % Width of name in classic style
-
-%%%%%%%%%%%%%%%%%%%%
-%% PERSONAL DATA %%
-%%%%%%%%%%%%%%%%%%%%
-
-\name{Yuvraj}{Raghuvanshi}
-\title{}  % Leave empty if no title needed
-\insti{Indian Institute of Technology, Kanpur (India)}  % Institution info
-
-% Contact information
-\address{Kanpur}{Uttar Pradesh}{India}
-\phone[mobile]{+91-8126744709}  % Mobile number
-\email{YuvrajRaghuvanshi.S@protonmail.com}      % Email address
-\homepage{www.linkedin.com/in/YuvrajRaghuvanshiS}  % LinkedIn profile
-
-% Additional links (GitHub in this case)
-\extrainfo{\homepagesymbol \httplink{www.github.com/YuvrajRaghuvanshiS}}
-
-% Photo (optional)
-% \photo[64pt][0.4pt]{logo.jpg}  
-% Parameters:
-% [64pt] - height of the photo
-% [0.4pt] - border thickness (0pt for no border)
-% {logo.jpg} - image filename
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% DOCUMENT BEGIN - CV %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!50,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=3pt,
+    arc=0pt,outer arc=0pt,
+}
 
 \begin{document}
 
-% Hyperlink styling
-\hypersetup{
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
-}
-\urlstyle{same}  % Make URLs use the same font as regular text
+%=======================
+% NAME & CONTACT (with icons & links)
+%=======================
+\begin{center}
+{\huge\textbf{Yuvraj Raghuvanshi}} \\
+Final Year Postgraduate, Department of Computer Science, Indian Institute of Technology, Kanpur \\
+\faEnvelope \ \href{mailto:YuvrajRaghuvanshi.S@protonmail.com}{YuvrajRaghuvanshi.S@protonmail.com} | 
+\href{mailto:yuvrajpr24@cse.iitk.ac.in}{yuvrajpr24@cse.iitk.ac.in}  \\ 
+\faMobile \ \href{tel:+91-8126744709}{+91-8126744709} $\bullet$
+\faLinkedin \ \href{https://linkedin.com/in/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS} $\bullet$
+\faGithub \ \href{https://github.com/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS}
+\end{center}
 
-% Title layout with photo on the right
-\noindent
-\begin{minipage}{.78\textwidth}
- \makecvtitle
-\end{minipage}%
-\begin{minipage}{.30\textwidth}
-  \centering
-  \includegraphics[height=3cm]{logo.jpg}
-\end{minipage}
-\vspace{-1em}
+\vspace{-4pt}
+\noindent\rule[0.5ex]{\linewidth}{1pt}
+\vspace{-25pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% PROFESSIONAL SUMMARY %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Professional Summary}
-\cvitem{}{
-Enthusiastic software engineer with 2+ years of experience building scalable systems, backend APIs, and cloud-native applications. Worked as a founding engineer on fintech and credit platforms, driving product development from the ground up. Comfortable across the stack, with a strong focus on backend, infrastructure, and deployment. Currently pursuing M.Tech in Computer Science at IIT Kanpur, with interests in distributed systems, applied machine learning, blockchain, and security.}
+%=======================
+% ACADEMIC QUALIFICATIONS
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Academic Qualifications}\end{tcolorbox}}}
+\begin{center}
+\begin{tabular}{|p{0.25\textwidth}|p{0.40\textwidth}|p{0.10\textwidth}|p{0.15\textwidth}|}
+\hline
+\centering{\textbf{Degree/Certificate}} & \centering{\textbf{Institute}} & \centering{\textbf{CPI/$\%$}} & \textbf{Year}\\
+\hline
+M.Tech. \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/iitk.pdf} & Indian Institute of Technology, Kanpur & 8.57/10 & 2024 -- Present\\
+\hline
+B.Tech. \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit.pdf} & ABES Institute of Technology, Ghaziabad & 7.59/10 & 2018 -- 2022\\
+\hline
+CBSE(\Romannum{12}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_xii.pdf} & J. P. Public School, Baraut (Private Candidate) & 70.6\% & 2018\\
+\hline
+CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_x.pdf} & J. P. Public School, Baraut & 8.0/10 & 2015\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{-10pt}
 
-%%%%%%%%%%%%%%%%
-%% EDUCATION %%
-%%%%%%%%%%%%%%%%
+%=======================
+% WORK EXPERIENCE
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Work Experience}\end{tcolorbox}}}
+\begin{itemize}[itemsep=5pt]
 
-\section{Education}
-\begin{cvcolumns}
-    % First column: Program names
-    \cvcolumn[0.35]{~~~~~~~~~~~~~~~~Program}
-    {
-        \cvcolumncell {~\textit{ {\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/iitk.pdf}{\textcolor{blue}{M.Tech.}}}} (Computer Science \& Engg.)}
-        \cvcolumncell {} 
-        \cvcolumncell {~\textit{ {\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit.pdf}{\textcolor{blue}{B.Tech.}}}} (Computer Science \& Engg.)}
-        \cvcolumncell {}     
-        \cvcolumncell {~\textit{ {{Intermediate}}} (Phy., Chem., Maths, CS)}
-        \cvcolumncell {}
-        \cvcolumncell {~\textit{ {High School}}}
-        \cvcolumncell {}
-    }
-    
-    % Second column: Institutions
-    \cvcolumn[0.38]{~~~~~~~~~~~~~Institution/Board}
-    {
-        \cvcolumncell{~Indian Institute of Technology, Kanpur}
-        \cvcolumncell{\textit{~~~~~~~~~~~~~~~~~~~~~~~~~~~Kanpur, Uttar Pradesh}}
-        \cvcolumncell{~ABES Institute of Technology}
-        \cvcolumncell{\textit{~~~~~~~~~~~~~~~~~~~~~~~Ghaziabad, Uttar Pradesh}}
-        \cvcolumncell{~J. P. Public School}
-        \cvcolumncell{\textit{~~~~~~~~~~~~~~~~~~~~~~~~Baraut, Uttar Pradesh}}
-        \cvcolumncell{~J. P. Public School}
-        \cvcolumncell{\textit{~~~~~~~~~~~~~~~~~~~~~~~~Baraut, Uttar Pradesh}}
-    }
-    
-    % Third column: Grades/CGPA
-    \cvcolumn[0.08]{~~~\%/CGPA}
-    {
-        \cvcolumncell{\textbf{~~~~8.57/10}}
-        \cvcolumncell{}
-        \cvcolumncell{\textbf{~~~~7.59/10}}
-        \cvcolumncell{}
-        \cvcolumncell{\textbf{~~~~70.6\%}}
-        \cvcolumncell{}
-        \cvcolumncell{\textbf{~~~~8.0/10}}
-    }
-      
-    % Fourth column: Years
-    \cvcolumn{~~~~~~~~~~~~Year}
-    {
-        \cvcolumncell{~~~~~~~~~~2024-26}
-        \cvcolumncell{}
-        \cvcolumncell{~~~~~~~~~~2018-22}
-        \cvcolumncell{}
-        \cvcolumncell{~~~~~~~~~~2017}
-        \cvcolumncell{}
-        \cvcolumncell{~~~~~~~~~~2015}
-    }
-\end{cvcolumns}
+    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/sixdis.pdf}} | Sixdis Tech. Pvt. Ltd. (\exticon{https://oolka.in/} Oolka.in), Bangalore \hfill (\textit{Dec 23 -- May 24})
+    \begin{itemize}[left=10pt]
+        \item Worked on the credit-analysis platform \textit{Oolka}, after Sixdis acquired its IP from Rupymart.  
+        \item Ensured smooth product transition by maintaining API versions, adding features, and supporting deployments.  
+        \item \textit{\textbf{Keywords}: API Development, Python, Django, FinTech, Product Transition, System Design}  
+    \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%
-%% WORK EXPERIENCE %%
-%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/rupymart.pdf}} | Rupymart Tech. Pvt. Ltd., Kolkata \hfill (\textit{Apr 23 -- Nov 23})  
+    \begin{itemize}[left=10pt]
+        \item Built infrastructure: RESTful APIs, PostgreSQL schemas, CI/CD pipelines, AWS + Docker deployments.  
+        \item Automated integration of credit bureau data to generate and analyze credit reports.  
+        \item Extended the bank statement parser \exticon{https://home.inkredo.in/} Inkredo with Django, pdfplumber, regex, and ML models.  
+        \item Re-engineered the credit-analysis product by migrating a third-party JavaScript codebase to Python3 for scalability and in-house ownership.  
+        \item \textit{\textbf{Keywords}: Python, FastAPI, PostgreSQL, AWS, Docker, ML Integration, System Migration}  
+    \end{itemize}
 
-\vspace{-1em}
-\section{Work Experience}
+    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/vectoscalar.pdf}} | Vectoscalar Tech. Pvt. Ltd., Noida \hfill (\textit{Nov 21 -- Oct 22})  
+    \begin{itemize}[left=10pt]
+        \item Built scalable microservices using Python Flask for e-commerce, ensuring 99.9\% uptime on AWS.  
+        \item Cut infrastructure costs with AWS Lambda and optimized deployments via Docker + CI/CD pipelines.  
+        \item Designed MongoDB schemas for reliable, high-volume transactions with seamless scalability.  
+        \item \textit{\textbf{Keywords}: Python Flask, Microservices, AWS Lambda, CI/CD, Docker, MongoDB, Cloud Infrastructure}  
+    \end{itemize}
 
-% Work Experience 1
-\cventry
-    {Bangalore, Karnataka (Remote)}
-    {(Sixdis Technologies Pvt. Ltd. | Rupymart Technologies. Pvt. Ltd.)}
-    {1. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/sixdis.pdf}{\textcolor{blue}{~Founding Engineer (Backend)}}}}}
-    {Apr 2023 - May 2024}
-    {}{}
-\cvlistitem{Key contributor to a joint venture by the founder of Inkredo and investors of Rupymart, building \textit{{\href{https://oolka.in/}{\textcolor{blue}{~Oolka}}}}, a credit-building platform.}
-\cvlistitem{Architected backend infrastructure, including RESTful APIs, PostgreSQL schemas, and CI/CD pipelines, deployed on AWS with Docker.}
-\cvlistitem{Built and deployed RESTful APIs on AWS, ensuring high availability and scalability with Docker.}
-\cvlistitem{Automated integration of credit bureau data to generate and analyze credit reports.}
-\cvlistitem{Simultaneously maintained and extended the \textit{{\href{https://home.inkredo.in/}{\textcolor{blue}{~Inkredo}}}} bank statement parser using Django, pdfplumber, regex, and integrated ML models.}
+\end{itemize}
+\vspace{-10pt}
 
-\vspace{2mm}
 
-% Work Experience 2
-\cventry
-    {Noida, Uttar Pradesh}
-    {(VectoScalar Technologies Pvt. Ltd.)}
-    {2. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/vectoscalar.pdf}{\textcolor{blue}{~Software Engineer}}}}}
-    {Nov 2021 - Oct 2022}
-    {}{}
-\cvlistitem{Built scalable microservices using Python Flask for in-house e-commerce platform, achieving 99.9\% uptime on AWS.}
-\cvlistitem{Reduced costs with AWS Lambda and improved deployments using Docker and CI/CD pipelines.}
-\cvlistitem{Designed NoSQL databases with MongoDB to ensure data reliability and seamless scalability.}
+%=======================
+% RESEARCH WORK
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Research Work}\end{tcolorbox}}}
+\begin{itemize}[itemsep=5pt]
 
-%%%%%%%%%%%%%%%%%%%
-%% KEY PROJECTS %%
-%%%%%%%%%%%%%%%%%%%
+    \item \textbf{Literary Generation in Regional Language using LLMs} \hfill (\textit{May 25 -- Present}) \\
+    \textbf{Mentor:} Prof. Arnab Bhattacharya, Department of Computer Science, IIT Kanpur
+    \begin{itemize}[left=10pt]
+        \item Curating large-scale datasets of Hindi poems, quotes, dohas, and folk literature for training.  
+        \item Fine-tuning IndicBERT and related transformer models for poet classification and thematic categorization.  
+        \item Goal: develop controllable LLMs capable of generating poetry in the style of specific poets or themes. 
+        \item \textit{\textbf{Keywords}: IndicBERT, LLM Fine-tuning, Text Generation, NLP, Poetry Generation}  
+    \end{itemize}
 
-\vspace{-1em}
-\section{Key Projects}
+    \item \textbf{DoodleVision \driveicon{https://github.com/YuvrajRaghuvanshiS/doodle-vision}} \hfill (\textit{Feb 25 -- Present}) \\
+    \textbf{Mentor:} Prof. Priyanka Bagade, Department of Computer Science, IIT Kanpur  
+    \begin{itemize}[left=10pt]
+        \item Built a novel hybrid deep learning model combining image and stroke data for sketch recognition; achieved \textbf{89.41\% accuracy} beating benchmark \exticon{https://eudl.eu/pdf/10.4108/eai.26-4-2019.162611} approach by \textbf{5\%}.  
+        \item Paper under preparation for \textbf{WACV 2025}, highlighting novelty in architecture and efficient multimodal fusion.  
+        \item Designed disk-streaming based training pipeline for \textbf{memory-constrained environments}, enabling training with 25M+ examples.  
+        \item Deploying optimized inference pipeline to edge devices (Raspberry Pi) for real-time applications.  
+        \item \textit{\textbf{Keywords}: Deep Learning, Multimodal Fusion, Disk-Streaming, Edge Deployment, CNN, LSTM}  
+    \end{itemize}
 
-% Key Project 1
-\cventry
-    {ABES Institute of Technology}
-    {(B.Tech / Guide: Prof. Veena Bharti)}
-    {1. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/earlaz_acc_letter.pdf}{\textcolor{blue}{EarlAz: Early Detection of Alzheimer's using ML}}}}}
-    {Jan 2022 - June 2022}
-    {}{}
-\cvlistitem{Developed a mobile game-based system for early detection of Alzheimer's Disease using machine learning techniques, focusing on interactive data collection during gameplay.}
-\cvlistitem{Implemented Support Vector Machine and Decision Tree algorithms to classify users' cognitive states and predict disease stage based on behavioral patterns and response times.}
-\cvlistitem{\textit{\textbf{Keywords}: Python, Anaconda, Keras, GPU, Confusion Matrix, SVM, Decision Tree, Unity3D, C\#}}
-% \cvlistitem{Language(used): Python}
-% \cvlistitem{Tools/Libraries (used): Anaconda (Spyder), GPU }
 
-%%%%%%%%%%%%%%%%%%%%%%%
-%% PERSONAL PROJECTS %%
-%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{EarlAz: Early Detection of Alzheimer's using Mobile Game and ML \driveicon{{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/earlaz_acc_letter.pdf}}} \hfill (\textit{Jan 22 -- Jun 22}) \\
+    \textbf{Mentor:} Prof. Veena Bharti, Department of Computer Science, ABESIT
+    \begin{itemize}[left=10pt]
+        \item Designed a mobile game to collect cognitive-behavioral data for early-stage Alzheimer's detection.  
+        \item Implemented SVM and Decision Tree classifiers to predict cognitive decline from gameplay features.
+    \item \textit{\textbf{Keywords}: Unity3D, SVM, Decision Tree, Cognitive Games, Keras, GPU}  
 
-\vspace{-1em}
-\section{Personal Projects}
-
-% Key Project 1
-\cventry
-    {Open Source}
-    {(Founder \& Maintainer)}
-    {1. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/WhatsApp-Key-Database-Extractor}{\textcolor{blue}{WhatsApp Key/Database Extractor}}}}}
-    {Nov 2020 - Aug 2023}
-    {}{}
-\cvlistitem{Developed a tool to extract WhatsApp private keys and plain-text databases from Android devices.}
-\cvlistitem{Gained \textbf{480+ stars, 60+ forks, and 200,000+ hits} on GitHub, attracting a global audience.}
-\cvlistitem{Utilized Python and Android Debug Bridge to ensure compatibility across multiple Android versions and scenarios.}
-\cvlistitem{\textit{\textbf{Keywords}: Python, Android, Digital Forensics, Android Debug Bridge (ADB)}}
-% \cvlistitem{Language(used): Python}
-% \cvlistitem{Tools/Libraries (used): Anaconda (Spyder), GPU }
-
-%%%%%%%%%%%%%%%%%%%%%%%%
-%% COURSE PROJECTS %%
-%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-1em}
-\section{Course Projects}
-
-% Course Project 1
-\cventry
-    {CS731 Blockchain, IIT Kanpur}
-    {(M.Tech / Faculty: Prof. Angshuman Karmakar)~~~~~\textbf{(Grade: A)}}
-    {1. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/mytravel}{\textcolor{blue}{Blockchain based Ticketing System}}}}}
-    {Mar 2025 - Apr 2025}
-    {}{}
-\cvlistitem{Built a \textbf{blockchain-based} ticketing system with web UI supporting secure booking, cancellation, and date/time changes for flights, trains, and buses.}
-\cvlistitem{Developed smart contracts to automate transactions, prevent overbooking/double-booking, and ensure verifiable, tamper-proof records.}
-\cvlistitem{\textit{\textbf{Keywords}: Hyperleger Fabric, Smart Contracts, Blockchain, Node.js, Frontend, Backend, Kubernetes, Docker,}}
-
-\vspace{2mm}
-
-% Course Project 2
-\cventry
-    {CS685 Data Mining, IIT Kanpur}
-    {(M.Tech / Faculty: Prof. Arnab Bhattacharya)~~~~~\textbf{(Grade: A)}}
-    {2. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs685_proj_report.pdf}{\textcolor{blue}{Detection of Deepfake}}}}}
-    {Sept 2024 - Nov 2024}
-    {}{}
-\cvlistitem{Developed a web platform for users to register, access, and review videos as authentic or deepfakes, aggregating human feedback for analysis.}
-\cvlistitem{Analyzed review patterns \& biases to assess the reliability of human judgment and extract trends in deepfake detection.}
-\cvlistitem{\textit{\textbf{Keywords}: Deepfake Detection, User Analytics, Thematic Analysis, TF-IDF, Temporal Analysis}}
-
-\vspace{2mm}
-
-% Course Project 3
-\cventry
-    {CS776 Computer Vision, IIT Kanpur}
-    {(M.Tech / Faculty: Prof. Priyanka Bagade)~~~~~\textbf{(Grade: B+)}}
-    {3. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs776_proj_report.pdf}{\textcolor{blue}{DoodleVision}}}}}
-    {Feb 2025 - Apr 2025}
-    {}{}
-\cvlistitem{Built a real-time system recognizing hand-drawn sketches using deep learning on both image data and stroke data generated via camera (OpenCV) and drawing (PyGame).}
-\cvlistitem{Benchmarked LSTM, ConvLSTM, Vision Transformers, CNNs, and a novel hybrid model combining image and stoke data; hybrid approach achieved 93.7\% accuracy and fast inference for edge deployment.}
-\cvlistitem{\textit{\textbf{Keywords}: Deep Learning, OpenCV, Image Recognition, Vision Transformers, LSTM, CNN}}
-
-\vspace{2mm}
-
-% Course Project 4
-\cventry
-    {CS661 Big Data, IIT Kanpur}
-    {(M.Tech / Faculty: Prof. Soumya Dutta)~~~~~\textbf{(Grade: B)}}
-    {4. \textit{{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs661_proj_report.pdf}{\textcolor{blue}{AmazoLens}}}}}
-    {Feb 2025 - Apr 2025}
-{}{}
-\cvlistitem{Developed an interactive dashboard for Amazon's e-commerce data, enabling sales trend analysis, customer segmentation, and product recommendation using advanced visualization and machine learning.}
-\cvlistitem{Implemented market basket analysis, topic mining (BERT, LDA), and sentiment analysis to extract insights from transactions and reviews; integrated forecasting with Facebook Prophet.}
-\cvlistitem{\textit{\textbf{Keywords}: Big Data, Data Visualization, Market Basket Analysis, NLP, Sentiment Analysis, Recommendation, D3.js, React, Python}}
-
-% %%%%%%%%%%%%%%%%%%%%%%%
-% %% ONLINE COURSES %%
-% %%%%%%%%%%%%%%%%%%%%%%%
-
-% %\vspace{-1em}
-% \section{Online Courses}
-
-% % Jovian Courses
-% \cvlistitem {Jovian:  
-% \textit{\href{https://someLinks}{\textcolor{blue}{Data Structures and Algorithms in Python}}} (May 2021),
-% \textit{\href{https://someLinks}{\textcolor{blue}{Deep Learning with PyTorch: Zero to GANs}}} (Jan 2021),
-% \textit{\href{https://someLinks}{\textcolor{blue}{Data Analysis with Python: Zero to Pandas}}} (Oct 2020)
-% }
-
-% % MathWorks Courses
-% \cvlistitem {MathWorks:
-% \textit{\href{https://someLinks}{\textcolor{blue}{Machine Learning with Matlab}} (June 2020)},
-% \textit{\href{https://someLinks}{\textcolor{blue}{Matlab Onramp}}} (May 20xx), 
-% \textit{\href{https://someLinks}{\textcolor{blue}{Deep Learning Onramp}}} (May 20xx),
-% \textit{\href{https://someLinks}{\textcolor{blue}{Machine Learning Onramp}}} (May 20xx),
-% \textit{\href{https://someLinks}{\textcolor{blue}{Deep Learning with Matlab}} (May 20xx)}
-% }
-
-% % Coursera Course
-% \cvlistitem {Coursera:  
-% \textit{\href{https://someLinks}{\textcolor{blue}{Covid-19 Contact Tracing}}} (May 20xx)}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% ONLINE COURSE PROJECTS %%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \vspace{-1em}
-% \section{Online Course Projects}
-% \cvlistdoubleitem{Classified \textit{\href{https://someLinks}{\textcolor{blue}{Food-101}}} images using ResNet-9. (20xx)}
-% {Classified \textit{\href{https://https://someLinks}{\textcolor{blue}{MNIST}}} hand written digit recognition. (20xx)}
-% \cvlistdoubleitem{Classified \textit{\href{https://someLinks}{\textcolor{blue}{CIFAR-10}}} images using Neural Network. (20xx)}
-% {Analysed \textit{\href{https://someLinks}{\textcolor{blue}{Covid-19}}} dataset for various parameters. (20xx)}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %% INDUSTRIAL TRAINING %%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \vspace{-1em}
-% \section{Industrial Training}
-
-% % Training 1
-% \cventry{National Skill Development Corporation, Kolkata}{(B.Tech / Mentor: Mrs XXXX)}
-% {1. \textit{{\href{https://someLinks}{\textcolor{blue}{Employee Appraisal System}}}}}{Dec 20xx - Jan 20xx}{}{}
-% \cvlistitem{Developed an application which computed the salary hike of an employee based on the performance rating.}
-
-% \vspace{2mm}
-
-% % Training 2
-% \cventry{Bharat Sanchar Nigam Limited, Jalpaiguri}{(Diploma / Mentor: XXXXXX)}
-% {2. \textit{{\href{https://someLinks}{\textcolor{blue}{Bharat Sanchar Nigam Limited (Networking)}}}}}{Oct-Nov 20xx}{}{}
-% \cvlistitem{Studied the working of landline phones and its architecture, in specified stream of Switching, OFC \& IT.}
-
-%%%%%%%%%%%%%%%%%%%%%%
-%% COURSE WORK %%
-%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-1em}
-\section{Course Work}
-\cventry
-    {IIT Kanupr}
-    {(Electives)}
-    {1. Key Courses}
-    {August 2024-April 2025}
-    {}{}
-\cvlisttripleitem{CS771 Intro to Machine Learning}{CS685 Data Mining}{CS661 Big Data Visual Analytics}
-\cvlisttripleitem{CS663 Computational Geometry}{CS731 Blockchain Technology \& Applications}{CS776 Deep Learning for Computer Vision}
-
-\vspace{1mm}
-
-\cventry
-    {ABES Institute of Technology}
-    {(Core and Electives)}
-    {1. Key Courses}
-    {August 2018-April 2024}
-    {}{}
-\cvlisttripleitem{KCS713 Cloud Computing}{KCS603 Computer Networks}{KCS601 Software Engineering}
-\cvlisttripleitem{KCS401 Operating Systems}{KCS501 Database Management Systems}{KAS103-KAS302 Mathematics I-IV}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% TECHNICAL SKILLS %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-1em}
-\section{Technical Skills}
-\cvlistdoubleitem
-    {\textbf{Languages}: Python, JavaScript (ES6+), C++}
-    {\textbf{Web Technologies}: HTML5, CSS3, JavaScript, Node.js}
-
-\cvlistdoubleitem
-    {\textbf{Databases}: MySQL, PostgreSQL, MongoDB}
-    {\textbf{Operating Systems}: Linux (Ubuntu), Windows}
-
-\cvlistitem{\textbf{Frameworks \& Libraries}: FastAPI, Django, React, Express.js, NumPy, Pandas, TensorFlow, PyTorch}
-\cvlistitem{\textbf{AI/ML}: Supervised/Unsupervised Learning, Deep Learning, Computer Vision, Natural Language Processing, Transformers, Model Deployment}
-\cvlistitem{\textbf{Dev}: Git, Docker, Kubernetes, AWS, CI/CD}
-\cvlistitem{\textbf{Other}: Hyperleger Fabric, LaTeX, REST APIs, Bash scripting, YAML, Microsoft Office Suite}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% POSITIONS OF RESPONSIBILITY %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-1em}
-\section{Positions of Responsibility}
-\begin{itemize}
-\item Teaching Assistant for ESC111/2, CSE Department, IIT Kanpur (Jan-May, 2025).
-\item Teaching Assistant for ELC courses, CSE Department, IIT Kanpur (July-Nov, 2024).
 \end{itemize}
 
-% %%%%%%%%%%%%%%%%
-% %% WORKSHOPS %%
-% %%%%%%%%%%%%%%%%
+\end{itemize}
+\vspace{-10pt}
 
-% \vspace{-1em}
-% \section{Workshops}
-% \cvlistitem {Participated in the webinar, 
-% \textit{{\href{https://someLinks}{\textcolor{blue}{Foundations of Vedic Mathematics}}}} conducted by SSNU, Tamil Nadu (20xx).}
+%=======================
+% PROJECTS
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Projects}\end{tcolorbox}}}
+\begin{itemize}[itemsep=5pt]
 
-% \cvlistitem {Participated in the webinar on 
-% \textit{{\href{https://someLinks}{\textcolor{blue}{NBA Accreditation \& Role of Stakeholders in the light of National Education Policy (2020)}}}}, organized by Women's polytechnic, Tripura in association with NITTTR, Kolkata (20xx).}
+    \item \textbf{WhatsApp Key/Database Extractor \driveicon{https://github.com/YuvrajRaghuvanshiS/WhatsApp-Key-Database-Extractor}} (Self Project, Open Source) \hfill (\textit{Nov 20 -- Aug 23})
+    \begin{itemize}[left=10pt]
+        \item Engineered a forensic tool to extract WhatsApp keys \& databases from Android devices using Python + ADB.
+        \item Adopted widely with \textbf{520+ stars, 70+ forks, and 500K+ hits} on GitHub.
+        \item \textit{\textbf{Keywords}: Python, Android, Digital Forensics, Android Debug Bridge (ADB)}
+    \end{itemize}
 
-% \cvlistitem {Participated the 
-% \textit{{\href{https://someLinks}{\textcolor{blue}{International Youth Web-Conclave on Vasudhaiva Kutumbakam}}}}, jointly organized by Sixth Sense Foundation, Shree Sisters, Kongunadu Arts and Science College, Sri Sarada Niketan College of Science for Women and Global International School (Nov 20xx).}
+    \item \textbf{Blockchain-based Ticketing System \driveicon{https://github.com/YuvrajRaghuvanshiS/mytravel}} \hfill (\textit{Mar 25 -- Apr 25}) \\
+    \textbf{Mentor:} Prof. Angshuman Karmakar, Department of Computer Science, IIT Kanpur
+    \begin{itemize}[left=10pt]
+        \item Developed a blockchain ticketing system with web UI for secure booking, cancellation, and rescheduling.
+        \item Implemented smart contracts to automate payments, prevent double-booking \& overbooking, and ensure verifiable records.
+        \item \textit{\textbf{Keywords}: Hyperledger Fabric, Smart Contracts, Blockchain, Node.js, Kubernetes, Docker}
+    \end{itemize}
 
-% \cvlistitem {Attended the workshop on 
-% \textit{{\href{https://someLinks}{\textcolor{blue}{Program for Aspiring College Teachers (PACT)}}}}, conducted by TLC, IIT Madras (20xx).}
+    \item \textbf{Detection of Deepfake \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs685_proj_report.pdf}} \hfill (\textit{Sep 24 -- Nov 24}) \\
+    \textbf{Mentor:} Prof. Arnab Bhattacharya, CSE, IIT Kanpur
+    \begin{itemize}[left=10pt]
+        \item Built a web platform to let users review videos as authentic/deepfake; aggregated responses for analysis.
+        \item Studied patterns, biases, and temporal trends in human judgment of deepfakes.
+        \item \textit{\textbf{Keywords}: Deepfake Detection, User Analytics, Thematic Analysis, TF-IDF, Temporal Analysis}
+    \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% ACHIEVEMENTS/AWARDS %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item \textbf{AmazoLens \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs661_proj_report.pdf}} \hfill (\textit{Feb 25 -- Apr 25}) \\
+    \textbf{Mentor:} Prof. Soumya Dutta, Department of Computer Science, IIT Kanpur
+    \begin{itemize}[left=10pt]
+        \item Designed an interactive dashboard for Amazons e-commerce data, enabling sales trend analysis, customer segmentation, and product recommendation using advanced visualization and machine learning.
+        \item Applied market basket analysis, topic mining, sentiment analysis, and forecasting (Prophet).
+        \item \textit{\textbf{Keywords}: Big Data, Data Visualization, Market Basket Analysis, NLP, Sentiment Analysis, Recommendation, D3.js, React, Python}
+    \end{itemize}
 
-\vspace{-1em}
-\section{Achievements/Awards}
+\end{itemize}
+\vspace{-10pt}
 
-\cvlistitem{Achieved \textbf{157\textsuperscript{th}} rank out of 123,967 candidates in \textit{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_cs_scorecard.pdf}{\textcolor{blue}{GATE 2024 (Computer Science)}}}.}
-\cvlistitem{Achieved \textbf{724\textsuperscript{th}} rank out of 39,210 candidates in \textit{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_da_scorecard.pdf}{\textcolor{blue}{GATE 2024 (Data Science and Artificial Intelligence)}}}.}
-\cvlistitem{Earned \textbf{200, 100, and 50-day streak} badges on \textit{\href{https://leetcode.com/u/YuvrajRaghuvanshiS/}{\textcolor{blue}{LeetCode}}} for daily problem solving consistency.}
-\cvlistitem{Awarded \textbf{Monthly Medals} (Oct, Nov, Dec 2024 and Jan 2025) on \textit{\href{https://leetcode.com/u/YuvrajRaghuvanshiS/}{\textcolor{blue}{LeetCode}}} for completing daily challenges.}
-\cvlistitem{Graduated with \textbf{1\textsuperscript{st} Division with Honours} in B.Tech. from \textit{\href{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit.pdf}{\textcolor{blue}{ABES Institute of Technology}}}.}
+%=======================
+% TECHNICAL SKILLS
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Technical Skills}\end{tcolorbox}}}
+\begin{multicols}{2}
+\begin{itemize}
+    \item \textbf{Languages:} Python, C++, JavaScript, C\#
+    \item \textbf{Web:} Node.js, React, Express.js, REST APIs
+    \item \textbf{Databases:} MySQL, PostgreSQL, MongoDB
+    \item \textbf{Frameworks:} FastAPI, Django, NumPy, Pandas, TensorFlow, PyTorch
+    \item \textbf{DevOps/Cloud:} Git, Docker, Kubernetes, AWS, CI/CD
+    \item \textbf{Others:} Hyperledger Fabric, Bash, YAML, \LaTeX
+\end{itemize}
+\end{multicols}
+\vspace{-20pt}
 
-%%%%%%%%%%%%%
-%% OTHERS %%
-%%%%%%%%%%%%%
+%=======================
+% POSITIONS OF RESPONSIBILITY
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Positions of Responsibility}\end{tcolorbox}}}
+\begin{itemize}
+    \item Teaching Assistant for CS787 Generative Artificial Intelligence, CSE, IIT Kanpur. \hfill (Jul 25 -- Present)
+    \item Teaching Assistant for ESC111/2, CSE Department, IIT Kanpur. \hfill (Jan 25 -- May 25)
+    \item Teaching Assistant for ELC courses, CSE Department, IIT Kanpur. \hfill (July 24 --Nov 24)
+\end{itemize}
+\vspace{-10pt}
 
-\vspace{0.5em}
+%=======================
+% SCHOLASTIC ACHIEVEMENTS
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Scholastic Achievements}\end{tcolorbox}}}
+\begin{itemize}
+    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_cs_scorecard.pdf} Ranked \textbf{157\textsuperscript{th}/123,967} in \textit{{GATE 24 (CS)}}.
+    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_da_scorecard.pdf} Ranked \textbf{724\textsuperscript{th}/39,210} in \textit{{GATE 24 (DS \& AI)}}.
+    \item Earned \textbf{200/100/50-day streaks} on \textit{LeetCode \exticon{https://leetcode.com/u/YuvrajRaghuvanshiS/}}, plus \textbf{Monthly Medals} (Oct 24 -- Jan 25).
+    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit.pdf} Graduated with \textbf{1\textsuperscript{st} Division with Honours}, \textit{ABES Institute of Technology}.
+\end{itemize}
+\vspace{-10pt}
 
-%Languages (Spoken/known): Assamese, Bengali, English, Garo, Hindi, Nepali. 
-\vspace{-1em}
-\section{Others}
-\cvlistdoubleitem{Hobbies: Basketball, Cooking, Music}{Languages: Hindi, English.}
+%=======================
+% RELEVANT COURSES
+%=======================
+{\large \textbf{\begin{tcolorbox}\textsc{Relevant Courses}\end{tcolorbox}}}
+\begin{center}
+\renewcommand{\arraystretch}{1.15} % compact row height
+\begin{tabular}{|p{0.30\textwidth}|p{0.30\textwidth}|p{0.30\textwidth}|}
+\hline
+Data Structures \& Algorithms & Operating Systems & Computer Networks \\
+Database Management Systems & Compiler Design & Software Engineering \\
+Discrete Mathematics & Theory of Computation & Cryptography \& Network Security \\
+Intro to Machine Learning (CS771) & Data Mining (CS685)$^*$ & Deep Learning for CV (CS776) \\
+Big Data Visual Analytics (CS661) & Cloud Computing & Blockchain \& Applications (CS731)$^*$ \\
+Computational Geometry (CS663) & Data Analytics & Discrete Structures \& Logic \\
+\hline
+\end{tabular}
+\end{center}
 
-% %%%%%%%%%%%%%%%%
-% %% DECLARATION %%
-% %%%%%%%%%%%%%%%%
+\vspace{-6pt}
+\begin{flushleft}
+\footnotesize{$^*$ Secured grade \textbf{A}}
+\end{flushleft}
+\vspace{-10pt}
 
-% \vspace{-0.1em}
-% \section{Declaration}
-% {I do hereby declare that all the details furnished above are true to the best of my knowledge and belief.}\\
-
-% {Place: Somewhere, State (Country)\hspace{25em} (Full Name)}\\
-% {Date: 18th Aug, 20xx}
-
-\vspace{5mm}
-Note: Highlighted are link to proofs and validation (if required).
+% %=======================
+% % EXTRA-CURRICULAR
+% %=======================
+% {\large \textbf{\begin{tcolorbox}\textsc{Extra-Curricular Activities}\end{tcolorbox}}}
+% \begin{itemize}
+% \item Won Volleyball event during Intramurals'15 at IIT Kanpur.
+% \item Runner-up in Volleyball at Inferno'15 (inter-hall sports).
+% \item Participated in Electromania, Takneek'15.
+% \end{itemize}
 
 \end{document}
-
-%% end of file `template.tex'.
