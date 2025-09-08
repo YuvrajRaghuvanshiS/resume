@@ -1,5 +1,5 @@
 \documentclass[10pt]{extarticle}
-\usepackage[a4paper,margin=0.5in]{geometry}  % Reasonable for most printers
+\usepackage[a4paper,margin=0.4in]{geometry}  % Reasonable for most printers
 \usepackage{romannum}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
@@ -9,12 +9,16 @@
 \usepackage{fontawesome5} % For icons
 \setlist[itemize]{noitemsep, topsep=0pt}
 \addtolength{\parskip}{-1.5mm}
+\usepackage{mathptmx}   % Times New Roman text + math
 
 % Drive icon for experience letter
 \newcommand{\driveicon}[1]{\href{#1}{\faGoogleDrive}}
 
 % External link icon for product/company
-\newcommand{\exticon}[1]{\href{#1}{\small \faExternalLink*}}
+\newcommand{\exticon}[1]{\href{#1}{\small \faLink}}
+
+% Github link icon for project
+\newcommand{\ghicon}[1]{\href{#1}{\faGithub}}
 
 
 \tcbset{
@@ -38,18 +42,18 @@
 % NAME & CONTACT (with icons & links)
 %=======================
 \begin{center}
-{\huge\textbf{Yuvraj Raghuvanshi}} \\
+{\huge\textbf{Yuvraj Pratiksh Raghuvanshi}} \\
 Final Year Postgraduate, Department of Computer Science, Indian Institute of Technology, Kanpur \\
-\faEnvelope \ \href{mailto:YuvrajRaghuvanshi.S@protonmail.com}{YuvrajRaghuvanshi.S@protonmail.com} | 
-\href{mailto:yuvrajpr24@cse.iitk.ac.in}{yuvrajpr24@cse.iitk.ac.in}  \\ 
-\faMobile \ \href{tel:+91-8126744709}{+91-8126744709} $\bullet$
-\faLinkedin \ \href{https://linkedin.com/in/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS} $\bullet$
-\faGithub \ \href{https://github.com/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS}
+\faEnvelope \ \href{mailto:YuvrajRaghuvanshi.S@protonmail.com}{YuvrajRaghuvanshi.S@protonmail.com}  \ \ \ \faEnvelope \ \href{mailto:yuvrajpr24@cse.iitk.ac.in}{yuvrajpr24@cse.iitk.ac.in}  \\ 
+\faMobile \ \href{tel:+91-8126744709}{+91-8126744709} \ \ \ 
+\faLinkedin \ \href{https://linkedin.com/in/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS} \ \ \ 
+\faGithub \ \href{https://github.com/YuvrajRaghuvanshiS}{YuvrajRaghuvanshiS} \ \ \ 
+\faGlobeAsia \ \href{https://yuvrajraghuvanshis.github.io/}{Portfolio}
 \end{center}
 
-\vspace{-4pt}
+\vspace{-10pt}
 \noindent\rule[0.5ex]{\linewidth}{1pt}
-\vspace{-25pt}
+\vspace{-30pt}
 
 %=======================
 % ACADEMIC QUALIFICATIONS
@@ -60,13 +64,17 @@ Final Year Postgraduate, Department of Computer Science, Indian Institute of Tec
 \hline
 \centering{\textbf{Degree/Certificate}} & \centering{\textbf{Institute}} & \centering{\textbf{CPI/$\%$}} & \textbf{Year}\\
 \hline
-M.Tech. \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/pingala_transcript.pdf} & Indian Institute of Technology, Kanpur & 8.57/10 & 2024 -- Present\\
+% \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/pingala_transcript.pdf}
+M.Tech. & Indian Institute of Technology, Kanpur & 8.57/10 & 2024 -- Present\\
 \hline
-B.Tech. \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit_marksheet.pdf} & ABES Institute of Technology, Ghaziabad & 7.59/10 & 2018 -- 2022\\
+% \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit_marksheet.pdf} 
+B.Tech. & ABES Institute of Technology, Ghaziabad & 7.59/10 & 2018 -- 2022\\
 \hline
-CBSE(\Romannum{12}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_xii.pdf} & J. P. Public School, Baraut (Private Candidate) & 70.6\% & 2018\\
+% \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_xii.pdf} 
+CBSE(\Romannum{12}) & J. P. Public School, Baraut (Private Candidate) & 72.6\% & 2018\\
 \hline
-CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_x.pdf} & J. P. Public School, Baraut & 8.0/10 & 2015\\
+% \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/class_x.pdf} 
+CBSE(\Romannum{10}) & J. P. Public School, Baraut & 8.0/10 & 2015\\
 \hline
 \end{tabular}
 \end{center}
@@ -76,31 +84,44 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % WORK EXPERIENCE
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Work Experience}\end{tcolorbox}}}
-\begin{itemize}[itemsep=5pt]
+\begin{itemize}[itemsep=4pt]
+    %  \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/sixdis.pdf}
+    \item \textbf{Founding Engineer} | Nyay Setu AI Pvt. Ltd., Kanpur \hfill (\textit{Jan 25 -- Sep 25}) 
+    \begin{itemize}[left=10pt]
+        \item Early contributor to a \textbf{legal-tech platform} connecting lawyers and clients via chat, calls, and appointments.  
+        \item Architected \textbf{infrastructure} with optimized schemas, scalable APIs, and modular UI.  
+        \item Built \textbf{real-time systems} using Firebase (messaging) and Agora SDK (video/voice).  
+        \item Prototyped \textbf{AI tools} for legal summarization and case guidance; now a silent partner.  
+    \end{itemize}
+    \textit{\textbf{Keywords}: Firebase, Agora SDK, WebRTC, PostgreSQL, Project Management, Web Application, AI for Law}
 
-    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/sixdis.pdf}} | Sixdis Tech. Pvt. Ltd. (\exticon{https://oolka.in/} Oolka.in), Bangalore \hfill (\textit{Dec 23 -- May 24})
+    %  \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/sixdis.pdf}
+    % \exticon{https://oolka.in/}
+    \item \textbf{Software Engineer} | Sixdis Tech. Pvt. Ltd. (Oolka.in), Bangalore \hfill (\textit{Dec 2023 -- May 2024})
     \begin{itemize}[left=10pt]
         \item Worked on the credit-analysis platform \textit{Oolka}, after Sixdis acquired its IP from Rupymart.  
-        \item Ensured smooth product transition by maintaining API versions, adding features, and supporting deployments.  
-        \item \textit{\textbf{Keywords}: API Development, Python, Django, FinTech, Product Transition, System Design}  
+        \item Ensured smooth \textbf{product transition} by maintaining API versions, adding features, and supporting deployments.  
     \end{itemize}
+    \textit{\textbf{Keywords}: API Development, Python, Django, FinTech, Product Transition, System Design}  
 
-    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/rupymart.pdf}} | Rupymart Tech. Pvt. Ltd., Kolkata \hfill (\textit{Apr 23 -- Nov 23})  
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/rupymart.pdf}
+    \item \textbf{Software Engineer} | Rupymart Tech. Pvt. Ltd., Kolkata \hfill (\textit{Apr 2023 -- Nov 2023})  
     \begin{itemize}[left=10pt]
         \item Built infrastructure: RESTful APIs, PostgreSQL schemas, CI/CD pipelines, AWS + Docker deployments.  
         \item Automated integration of credit bureau data to generate and analyze credit reports.  
         \item Extended the bank statement parser \exticon{https://home.inkredo.in/} Inkredo with Django, pdfplumber, regex, and ML models.  
-        \item Re-engineered the credit-analysis product by \textbf{migrating a third-party JavaScript codebase to Python3} for scalability and in-house ownership.  
-        \item \textit{\textbf{Keywords}: Python, FastAPI, PostgreSQL, AWS, Docker, ML Integration, System Migration}  
+        \item \textbf{Migrated entire third-party JavaScript codebase to Python3} for scalability and in-house ownership.  
     \end{itemize}
+    \textit{\textbf{Keywords}: Python, FastAPI, PostgreSQL, AWS, Docker, ML Integration, System Migration}  
 
-    \item \textbf{Software Engineer \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/vectoscalar.pdf}} | Vectoscalar Tech. Pvt. Ltd., Noida \hfill (\textit{Nov 21 -- Oct 22})  
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/vectoscalar.pdf}
+    \item \textbf{Software Engineer} | Vectoscalar Tech. Pvt. Ltd., Noida \hfill (\textit{Nov 2021 -- Oct 2022})  
     \begin{itemize}[left=10pt]
-        \item Built scalable microservices using Python Flask for e-commerce, ensuring 99.9\% uptime on AWS.  
-        \item Cut infrastructure costs with AWS Lambda and optimized deployments via Docker + CI/CD pipelines.  
-        \item Designed MongoDB schemas for reliable, high-volume transactions with seamless scalability.  
-        \item \textit{\textbf{Keywords}: Python Flask, Microservices, AWS Lambda, CI/CD, Docker, MongoDB, Cloud Infrastructure}  
+        \item Built scalable microservices using Python Flask for e-commerce, \textbf{ensuring 99.9\% uptime} on AWS.  
+        \item Cut infrastructure costs with \textbf{AWS Lambda} and optimized deployments via \textbf{Docker + CI/CD pipelines}.  
+        \item \textbf{Designed MongoDB schemas} for reliable, high-volume transactions with seamless scalability.  
     \end{itemize}
+    \textit{\textbf{Keywords}: Python Flask, Microservices, AWS Lambda, CI/CD, Docker, MongoDB, Cloud Infrastructure}  
 
 \end{itemize}
 \vspace{-10pt}
@@ -110,36 +131,35 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % RESEARCH WORK
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Research Work}\end{tcolorbox}}}
-\begin{itemize}[itemsep=5pt]
+\begin{itemize}[itemsep=4pt]
 
-    \item \textbf{Literary Generation in Regional Language using LLMs} \hfill (\textit{May 25 -- Present}) \\
-    \textbf{Mentor:} Prof. Arnab Bhattacharya, Department of Computer Science, IIT Kanpur
+    \item \textbf{Poetry Generation in Hindi} | Anviksha Labs, BharatGen \exticon{https://bharatgen.iitk.ac.in/} -- Prof. Arnab Bhattacharya, IIT Kanpur \hfill (\textit{May 2025 -- Present}) 
     \begin{itemize}[left=10pt]
-        \item Curating large-scale datasets of Hindi poems, quotes, dohas, and folk literature for training.  
-        \item Fine-tuning IndicBERT and related transformer models for poet classification and thematic categorization.  
-        \item Goal: develop controllable LLMs capable of generating poetry in the style of specific poets or themes. 
-        \item \textit{\textbf{Keywords}: IndicBERT, LLM Fine-tuning, Text Generation, NLP, Poetry Generation}  
+        \item Curating \& preprocessed large-scale datasets of Hindi poems, quotes, dohas, and folk literature for training.  
+        \item Fine-tuned \textbf{IndicBERTv2} and related models for multi-class poet identification and multi-label thematic classification.
+        \item Developed a custom \textbf{Trainer with weighted loss functions}, improving minority class \textbf{performance by 25\%}.
+        \item Future work on \textbf{Hindi LLMs} using both encoder-only and encoder-decoder setups for poem generation.
     \end{itemize}
+    \textit{\textbf{Keywords}: Hugging Face, IndicBERT, LLM Fine-tuning, Text Generation, NLP, Poetry Generation}  
 
-    \item \textbf{DoodleVision \driveicon{https://github.com/YuvrajRaghuvanshiS/doodle-vision}} \hfill (\textit{Feb 25 -- Present}) \\
-    \textbf{Mentor:} Prof. Priyanka Bagade, Department of Computer Science, IIT Kanpur  
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/doodle-vision}
+    \item \textbf{DoodleVision} | Prof. Priyanka Bagade, IIT Kanpur \hfill (\textit{Feb 2025 -- Present})  
     \begin{itemize}[left=10pt]
-        \item Built a novel hybrid deep learning model combining image and stroke data for sketch recognition; achieved \textbf{89.41\% accuracy} beating benchmark \exticon{https://eudl.eu/pdf/10.4108/eai.26-4-2019.162611} approach by \textbf{5\%}.  
-        \item Paper under preparation for \textbf{WACV 2025}, highlighting novelty in architecture and efficient multimodal fusion.  
-        \item Designed disk-streaming based training pipeline for \textbf{memory-constrained environments}, enabling training with 25M+ examples.  
+        \item Built novel hybrid model fusing image+stroke data; achieved \textbf{89.41\% accuracy}, \textbf{+5\%} over benchmark \exticon{https://eudl.eu/pdf/10.4108/eai.26-4-2019.162611}.  
+        \item Paper under preparation for \textbf{WACV 2026}, highlighting novelty in architecture and efficient multimodal fusion.  
+        \item Designed disk-streaming pipeline for \textbf{memory-constrained environments}, training with 25M+ examples.  
         \item Deploying optimized inference pipeline to edge devices (Raspberry Pi) for real-time applications.  
-        \item \textit{\textbf{Keywords}: Deep Learning, Multimodal Fusion, Disk-Streaming, Edge Deployment, CNN, LSTM}  
     \end{itemize}
+    \textit{\textbf{Keywords}: Deep Learning, Multimodal Fusion, Disk-Streaming, Edge Deployment, CNN, LSTM}  
 
 
-    \item \textbf{EarlAz: Early Detection of Alzheimer's using Mobile Game and ML \driveicon{{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/earlaz_acc_letter.pdf}}} \hfill (\textit{Jan 22 -- Jun 22}) \\
-    \textbf{Mentor:} Prof. Veena Bharti, Department of Computer Science, ABESIT
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/earlaz_acc_letter.pdf}
+    \item \textbf{EarlAz: Early Detection of Alzheimer's using Mobile Game and ML} | Prof. Veena Bharti, ABESIT \hfill (\textit{Jan 2022 -- Jun 2022})
     \begin{itemize}[left=10pt]
         \item Designed a mobile game to collect cognitive-behavioral data for early-stage Alzheimer's detection.  
         \item Implemented SVM and Decision Tree classifiers to predict cognitive decline from gameplay features.
-    \item \textit{\textbf{Keywords}: Unity3D, SVM, Decision Tree, Cognitive Games, Keras, GPU}  
-
-\end{itemize}
+    \end{itemize}
+    \textit{\textbf{Keywords}: Unity3D, SVM, Decision Tree, Cognitive Games, Keras, GPU}  
 
 \end{itemize}
 \vspace{-10pt}
@@ -148,40 +168,46 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % PROJECTS
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Projects}\end{tcolorbox}}}
-\begin{itemize}[itemsep=5pt]
+\begin{itemize}[itemsep=4pt]
 
-    \item \textbf{WhatsApp Key/Database Extractor \driveicon{https://github.com/YuvrajRaghuvanshiS/WhatsApp-Key-Database-Extractor}} (Self Project, Open Source) \hfill (\textit{Nov 20 -- Aug 23})
+    \item \textbf{WhatsApp Key/Database Extractor \ghicon{https://github.com/YuvrajRaghuvanshiS/WhatsApp-Key-Database-Extractor}} | (Self Project, Open Source) \hfill (\textit{Nov 2020 -- Aug 2023})
     \begin{itemize}[left=10pt]
-        \item Engineered a \textbf{forensic tool} to extract WhatsApp keys \& databases from Android devices via Python + ADB.
-        \item Enabled \textbf{migration of WhatsApp chats to Signal}, collaborating with Swiss developer on \exticon{https://github.com/jukefoxer/Signal-Android} Signal-Android.
-        \item Demonstrated capability to remotely extract files without target user intervention.
+        \item Engineered a \textbf{forensic tool} to \textbf{remotely} extract WhatsApp keys \& databases from Android devices.        \item Enabled \textbf{migration of WhatsApp chats to Signal}, collaborating with Swiss developer on \exticon{https://github.com/jukefoxer/Signal-Android} Signal-Android.
         \item Open-sourced with strong adoption: \textbf{520+ stars, 70+ forks, 500K+ hits} on GitHub.
-        \item \textit{\textbf{Keywords}: Python, Android, Digital Forensics, Security Research, Android Debug Bridge (ADB)}
-  \end{itemize}
+    \end{itemize}
+    \textit{\textbf{Keywords}: Python, Android, Digital Forensics, Security Research, Android Debug Bridge, Collaboration}
 
-    \item \textbf{Blockchain-based Ticketing System \driveicon{https://github.com/YuvrajRaghuvanshiS/mytravel}} \hfill (\textit{Mar 25 -- Apr 25}) \\
-    \textbf{Mentor:} Prof. Angshuman Karmakar, Department of Computer Science, IIT Kanpur
+    \item \textbf{Blockchain-based Ticketing System \ghicon{https://github.com/YuvrajRaghuvanshiS/mytravel}} | CS731 Blockchain \& it's Applications\hfill (\textit{Mar 2025 -- Apr 2025}) \\
+    \textbf{Mentor:} Prof. Angshuman Karmakar, IIT Kanpur
     \begin{itemize}[left=10pt]
         \item Developed a blockchain ticketing system with web UI for secure booking, cancellation, and rescheduling.
-        \item Implemented smart contracts to automate payments, prevent double-booking \& overbooking, and ensure verifiable records.
-        \item \textit{\textbf{Keywords}: Hyperledger Fabric, Smart Contracts, Blockchain, Node.js, Kubernetes, Docker}
+        \item Implemented smart contracts for payments, verifiable records, and double-booking \& overbooking prevention.
     \end{itemize}
+    \textit{\textbf{Keywords}: Hyperledger Fabric, Smart Contracts, Blockchain, Node.js, Kubernetes, Docker}
 
-    \item \textbf{Detection of Deepfake \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs685_proj_report.pdf}} \hfill (\textit{Sep 24 -- Nov 24}) \\
-    \textbf{Mentor:} Prof. Arnab Bhattacharya, CSE, IIT Kanpur
+    \item \textbf{Detection of Deepfake \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs685_proj_report.pdf}} | CS685 Data Mining \hfill (\textit{Sep 2024 -- Nov 2024}) \\
+    \textbf{Mentor:} Prof. Arnab Bhattacharya, IIT Kanpur
     \begin{itemize}[left=10pt]
         \item Built a web platform to let users review videos as authentic/deepfake; aggregated responses for analysis.
         \item Studied patterns, biases, and temporal trends in human judgment of deepfakes.
-        \item \textit{\textbf{Keywords}: Deepfake Detection, User Analytics, Thematic Analysis, TF-IDF, Temporal Analysis}
     \end{itemize}
+    \textit{\textbf{Keywords}: Deepfake Detection, User Analytics, Thematic Analysis, TF-IDF, Temporal Analysis}
 
-    \item \textbf{AmazoLens \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs661_proj_report.pdf}} \hfill (\textit{Feb 25 -- Apr 25}) \\
-    \textbf{Mentor:} Prof. Soumya Dutta, Department of Computer Science, IIT Kanpur
+    \item \textbf{Unsupervised Domain Adaptation \ghicon{https://github.com/YuvrajRaghuvanshiS/Unsupervised-Domain-Adaptation}} | CS771 - Introduction to Machine Learning \hfill (\textit{Aug 2024 -- Nov 2024}) \\
+    \textbf{Mentor:} Prof. Piyush Rai, IIT Kanpur
     \begin{itemize}[left=10pt]
-        \item Designed an interactive dashboard for Amazons e-commerce data, enabling sales trend analysis, customer segmentation, and product recommendation using advanced visualization and machine learning.
-        \item Applied market basket analysis, topic mining, sentiment analysis, and forecasting (Prophet).
-        \item \textit{\textbf{Keywords}: Data Visualization, Market Basket Analysis, NLP, Sentiment Analysis, Recommendation, D3.js}
+        \item Built a pipeline to evaluate \textbf{SVM adaptability} on evolving unlabeled streams using pseudo-labeling and re-clustering.
+        \item Automated ingestion, incremental learning, and visual diagnostics for monitoring across \textbf{shifting domains}.
     \end{itemize}
+    \textit{\textbf{Keywords}: Python, NumPy, scikit-learn, Pandas, Matplotlib, Domain Adaptation}
+
+    \item \textbf{AmazoLens \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/cs661_proj_report.pdf}} | CS661 Big Data Visual Analytics \hfill (\textit{Feb 2025 -- Apr 2025}) \\
+    \textbf{Mentor:} Prof. Soumya Dutta, IIT Kanpur
+    \begin{itemize}[left=10pt]
+        \item Built a dashboard for Amazon data to analyze sales, segment customers, and recommend products with ML.
+        \item Applied market basket analysis, topic mining, sentiment analysis, and forecasting (Prophet).
+    \end{itemize}
+    \textit{\textbf{Keywords}: Data Visualization, Market Basket Analysis, NLP, Sentiment Analysis, Recommendation, D3.js}
 
 \end{itemize}
 \vspace{-10pt}
@@ -190,14 +216,15 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % TECHNICAL SKILLS
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Technical Skills}\end{tcolorbox}}}
+\vspace{-20pt}
 \begin{multicols}{2}
 \begin{itemize}
-    \item \textbf{Languages:} Python, C++, JavaScript, C\#
-    \item \textbf{Web:} Node.js, React, Express.js, REST APIs
-    \item \textbf{Databases:} MySQL, PostgreSQL, MongoDB
-    \item \textbf{Frameworks:} FastAPI, Django, NumPy, Pandas, TensorFlow, PyTorch
-    \item \textbf{DevOps/Cloud:} Git, Docker, Kubernetes, AWS, CI/CD
-    \item \textbf{Others:} Hyperledger Fabric, Bash, YAML, \LaTeX
+    \item \textbf{Languages:} Python, C/C++, JavaScript, SQL, C\#
+    \item \textbf{Web:} FastAPI, Flask, Express.js, Node.js, React, GraphQL, gRPC, REST
+    \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch
+    \item \textbf{ML/Frameworks:} NumPy, Pandas, TensorFlow, PyTorch, Scikit-learn, Hugging Face, OpenCV
+    \item \textbf{DevOps/Cloud:} Git, Docker, Kubernetes, AWS, SageMaker, GCP, Azure, Terraform, CI/CD
+    \item \textbf{Others:} Kafka, Zookeeper, RabbitMQ, Airflow, Spark, Hadoop, Hyperledger Fabric, Bash, YAML, \LaTeX
 \end{itemize}
 \end{multicols}
 \vspace{-20pt}
@@ -206,10 +233,11 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % POSITIONS OF RESPONSIBILITY
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Positions of Responsibility}\end{tcolorbox}}}
+\vspace{-5pt}
 \begin{itemize}
-    \item Teaching Assistant for CS787 Generative Artificial Intelligence, CSE, IIT Kanpur. \hfill (Jul 25 -- Present)
-    \item Teaching Assistant for ESC111/2, CSE Department, IIT Kanpur. \hfill (Jan 25 -- May 25)
-    \item Teaching Assistant for ELC courses, CSE Department, IIT Kanpur. \hfill (July 24 --Nov 24)
+    \item Teaching Assistant for CS787 Generative Artificial Intelligence, CSE, IIT Kanpur. \hfill (Jul 2025 -- Present)
+    \item Teaching Assistant for ESC111/2, CSE Department, IIT Kanpur. \hfill (Jan 2025 -- May 2025)
+    \item Teaching Assistant for ELC courses, CSE Department, IIT Kanpur. \hfill (July 2024 --Nov 2024)
 \end{itemize}
 \vspace{-10pt}
 
@@ -217,11 +245,16 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 % SCHOLASTIC ACHIEVEMENTS
 %=======================
 {\large \textbf{\begin{tcolorbox}\textsc{Scholastic Achievements}\end{tcolorbox}}}
+\vspace{-5pt}
 \begin{itemize}
-    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_cs_scorecard.pdf} Ranked \textbf{157\textsuperscript{th}/123,967} in \textit{{GATE 24 (CS)}}.
-    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_da_scorecard.pdf} Ranked \textbf{724\textsuperscript{th}/39,210} in \textit{{GATE 24 (DS \& AI)}}.
-    \item Earned \textbf{200/100/50-day streaks} on \textit{LeetCode \exticon{https://leetcode.com/u/YuvrajRaghuvanshiS/}}, plus \textbf{Monthly Medals} (Oct 24 -- Jan 25).
-    \item \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit_degree.pdf} Graduated with \textbf{1\textsuperscript{st} Division with Honours}, \textit{ABES Institute of Technology}.
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_cs_scorecard.pdf}
+    \item Ranked \textbf{157\textsuperscript{th}/123,967} in \textit{{GATE 24 (CS)}}.
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/gate_da_scorecard.pdf} 
+    \item Ranked \textbf{724\textsuperscript{th}/39,210} in \textit{{GATE 24 (DS \& AI)}}.
+    % \textit{LeetCode \exticon{https://leetcode.com/u/YuvrajRaghuvanshiS/}}
+    \item Earned \textbf{200 / 100 / 50-day streaks} on Leetcode, plus \textbf{Monthly Medals} (Oct 2024 -- Jan 2025).
+    % \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/refs/heads/master/documents/abesit_degree.pdf}
+    \item Graduated with \textbf{1\textsuperscript{st} Division with Honours}, \textit{ABES Institute of Technology}.
 \end{itemize}
 \vspace{-10pt}
 
@@ -234,7 +267,7 @@ CBSE(\Romannum{10}) \driveicon{https://github.com/YuvrajRaghuvanshiS/resume/raw/
 \renewcommand{\arraystretch}{1.15} % compact row height
 \begin{tabular}{|p{0.30\textwidth}|p{0.30\textwidth}|p{0.30\textwidth}|}
 \hline
-Data Structures \& Algorithms & Operating Systems & Computer Networks \\
+Data Structures \& Algorithms & Operating Systems & Computer Networks$^*$ \\
 Database Management Systems & Compiler Design & Software Engineering \\
 Discrete Mathematics & Theory of Computation & Cryptography \& Network Security \\
 Intro to Machine Learning (CS771) & Data Mining (CS685)$^*$ & Deep Learning for CV (CS776) \\
